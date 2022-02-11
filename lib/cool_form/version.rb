@@ -1,0 +1,3 @@
+module CoolForm
+  VERSION = "0.1.0"
+end
