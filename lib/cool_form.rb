@@ -8,6 +8,7 @@ require "cool_form/components/text_area"
 
 module CoolForm
   # Your code goes here...
+  include ActiveSupport::Configurable
 end
 
 ActiveSupport.on_load(:action_view) do

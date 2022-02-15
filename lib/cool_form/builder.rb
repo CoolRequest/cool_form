@@ -10,19 +10,9 @@ module CoolForm
 
     private
 
-    # TODO: change this to ActiveSupport::Configurable
-    def config
-      { 
-        default_components: {
-          string: CoolForm::Components::Input,
-          text: CoolForm::Components::TextArea,
-          select: CoolForm::Components::Select
-        }
-      }
-    end
-
     def get_component(as)
-      klass = config[:default_components][as]
+      mapping = CoolForm.config.component_mappings
+      klass = mapping[as]
       raise "Component not found: #{as}" unless klass
 
       klass
