@@ -5,6 +5,7 @@ require "cool_form/builder"
 require "cool_form/components/input"
 require "cool_form/components/select"
 require "cool_form/components/text_area"
+require "cool_form/components/bootstrap/input"
 
 module CoolForm
   # Your code goes here...

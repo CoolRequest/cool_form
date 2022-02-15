@@ -12,7 +12,7 @@ module CoolForm
 
     def get_component(as)
       mapping = CoolForm.config.component_mappings
-      klass = mapping[as]
+      klass = mapping[as].constantize
       raise "Component not found: #{as}" unless klass
 
       klass
